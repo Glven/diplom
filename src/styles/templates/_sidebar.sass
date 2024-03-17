@@ -1,13 +1,23 @@
 .sidebar
+  z-index: 4
   display: flex
   flex-direction: column
+  &_fixed
+    position: fixed
   &__element
-    display: inline-block
+    margin: 10px 2rem
+  &__link
     color: $light
     font-size: 14px
     font-family: 'Montserrat', sans-serif
-    margin: 10px 2rem
     transition: 0.3s
     font-weight: 700
     &:hover
       color: $primary
+    span
+      margin-left: 1rem
+      vertical-align: middle
+    i
+      width: 18px
+      text-align: center
+      vertical-align: middle
