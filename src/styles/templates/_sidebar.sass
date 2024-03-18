@@ -1,4 +1,4 @@
-.sidebar
+.sidebar, .sidebar-profile
   display: flex
   flex-direction: column
   background: $dark
@@ -28,3 +28,14 @@
     padding: 10px 2rem
     font-size: 14px
     color: $light
+  &-profile
+    &__item
+      padding: 2rem
+      transition: 0.3s
+      font-family: 'Montserrat', sans-serif
+      font-weight: 500
+      i
+        width: 18px
+        margin-right: 5px
+      &:hover
+        color: $primary
