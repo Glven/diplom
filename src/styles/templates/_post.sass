@@ -5,6 +5,7 @@
   margin-bottom: 3rem
   box-shadow: 0 0 2px rgba($light, 25%)
   height: 70rem
+  position: relative
   .author
     display: flex
     align-items: center
@@ -15,6 +16,14 @@
       margin-right: 10px
       border-radius: 50%
       background: gray
+      display: flex
+      align-items: center
+      justify-content: center
+      overflow: hidden
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
     &-info
       &__name
         margin-bottom: 5px
@@ -32,6 +41,13 @@
     img
       height: 100%
       object-fit: cover
+  &__category
+    display: flex
+    align-items: center
+    margin-bottom: 1rem
+    font-size: 14px
+    span
+      margin-left: 1rem
   &__title
     margin-bottom: 1rem
     font-size: 16px
@@ -40,11 +56,11 @@
     font-weight: 700
     display: inline-block
   &__text
-    margin-bottom: 5px
+    margin-bottom: 10px
     font-size: 14px
     line-height: 14*1.5px
     overflow: hidden
-    height: 21rem
+    height: 15rem
     text-overflow: ellipsis
   &__info
     display: flex
@@ -59,10 +75,10 @@
       &__scale
         height: 4px
       &__lscale
-        background: green
+        background: #32841D
         width: 70px
       &__dscale
-        background: red
+        background: #841D1D
         width: 30px
     .coverage
       display: flex

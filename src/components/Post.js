@@ -7,7 +7,7 @@ const Post = (props) => {
         <div className="post">
             <div className="author">
                 <div className="author__photo">
-                    <img src="" alt=""/>
+                    <img src={props.ava} alt=""/>
                 </div>
                 <div className="author-info">
                     <h3 className="author-info__name">{props.name}</h3>
@@ -17,11 +17,15 @@ const Post = (props) => {
             <div className="post__photo">
                 <img src={props.photo} alt=""/>
             </div>
+            <div className="post__category">
+                <i className="fa fa-tag" aria-hidden="true"></i>
+                <span>{props.category}</span>
+            </div>
             <NavLink to={ARTICLE_PAGE} className="post__title">{props.title}</NavLink>
             <p className="post__text">
                 {props.text}
             </p>
-            <NavLink to={ARTICLE_PAGE} className="post__link">Читать далее</NavLink>
+            <NavLink to={ARTICLE_PAGE} className="btn btn--primary post__link">Читать далее</NavLink>
             <div className="post__info">
                 <div className="rating">
                     <span className="rating__count rating__l">{props.likes}</span>

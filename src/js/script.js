@@ -1,9 +1,8 @@
-window.onload = function (){
+window.onload = () => {
     const menu = document.getElementById('menu');
     const nav = document.querySelector('.header-nav');
-    menu.addEventListener('click', ()=>{
-        nav.classList.toggle('header-nav_active');
-    });
+
+    showAndHide(menu, nav, 'header-nav_active');
     nav.addEventListener('click', (e)=>{
         if(e.target.classList.contains('header-nav__item')){
             nav.classList.remove('header-nav_active');
@@ -13,5 +12,12 @@ window.onload = function (){
         if(!nav.contains(e.target)&&!menu.contains(e.target)){
             nav.classList.remove('header-nav_active');
         }
+    });
+
+}
+
+export const showAndHide = (button, container, className) =>{
+    button.addEventListener('click', ()=>{
+        container.classList.toggle(className);
     });
 }

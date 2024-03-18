@@ -1,0 +1,30 @@
+.sidebar
+  display: flex
+  flex-direction: column
+  background: $dark
+  border-radius: 12px
+  box-shadow: 0 0 2px rgba($light, 25%)
+  overflow: hidden
+  position: fixed
+  width: 300px
+  z-index: 4
+  &__down
+    margin-left: auto
+    display: none
+  &__wrapper
+    display: flex
+    flex-direction: column
+    transition: 0.3s
+  &__title
+    display: flex
+    padding: 2rem
+    padding-bottom: 0
+    align-items: center
+    font-size: 16px
+    margin-bottom: 15px
+    i
+      margin-right: 10px
+  &__item
+    padding: 10px 2rem
+    font-size: 14px
+    color: $light
