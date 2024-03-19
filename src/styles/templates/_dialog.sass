@@ -1,0 +1,93 @@
+.dialog
+  &__wrapper
+    border-radius: 12px
+    overflow: hidden
+    height: 80vh
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    background: #0e0e0e
+  &-info
+    background: $dark
+    display: flex
+    padding: 1rem 2rem
+    &__photo
+      width: 6rem
+      height: 6rem
+      overflow: hidden
+      display: flex
+      align-items: center
+      justify-content: center
+      border-radius: 50%
+      margin-right: 10px
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__text
+      display: flex
+      flex-direction: column
+    &__name
+      @include title()
+      margin-bottom: 1rem
+    &__online
+      font-size: 12px
+  &-list
+    padding: 1rem 2rem
+    background: #0e0e0e
+    overflow-y: auto
+  &-form
+    padding: 1rem 2rem
+    background: $dark
+    display: flex
+    align-items: center
+    &__input
+      width: 95%
+      padding: 5px
+      font-size: 14px
+      letter-spacing: 1px
+      color: $dark
+      font-weight: 500
+      border-radius: 6px
+      resize: none
+      overflow-y: auto
+      max-height: 10rem
+      line-height: 14px*1.5
+      &::placeholder
+        color: $primary
+        font-family: 'Montserrat', sans-serif
+    &__btn
+      width: 5%
+      text-align: right
+      @include title()
+@include scroll('.dialog-list', 4px, $dark, $primary)
+@include scroll('.dialog-form__input', 3px, $dark, $primary)
+.message
+  width: 90%
+  position: relative
+  background: $dark
+  padding: 1rem
+  border-radius: 12px
+  margin-bottom: 10px
+  @include text()
+  &:after
+    content: ""
+    position: absolute
+    z-index: 10
+    width: 16px
+    height: 16px
+    background: $dark
+    transform: rotate(45deg)
+    bottom: 3px
+    border-radius: 2px
+  &-in
+    border-bottom-left-radius: 0
+    &:after
+      left: 0
+      transform: translateX(-50%) rotate(45deg)
+  &-out
+    margin-left: auto
+    border-bottom-right-radius: 0
+    &:after
+      right: 0
+      transform: translateX(50%) rotate(45deg)

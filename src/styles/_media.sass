@@ -3,6 +3,7 @@
     width: 250px
   .messages-info__last
     max-width: 55rem
+//@media (max-width: 1199px)
 @media (min-width: 992px) and (max-width: 1199px)
   .sidebar
     width: 250px
@@ -66,6 +67,15 @@
     &-info
       &__last
         max-width: 30rem
+  .dialog
+    &__wrapper
+      position: fixed
+      width: 100%
+      top: 0
+      left: 0
+      z-index: 10
+      height: 100%
+      padding-bottom: 4rem
 @media (max-width: 767px)
   html
     font-size: 8px
@@ -144,3 +154,9 @@
     &-info
       &__last
         max-width: 20rem
+  .dialog
+    &-form
+      &__input
+        width: 94%
+      &__btn
+        width: 6%

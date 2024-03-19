@@ -1,3 +1,21 @@
+@mixin title()
+  font-family: 'Montserrat', sans-serif
+  font-display: swap
+  font-size: 16px
+  font-weight: 500
+  color: $primary
+@mixin text()
+  color: $light
+  font-size: 14px
+  line-height: 14*1.5px
+@mixin scroll($className, $width, $bgTrack, $bgThumb)
+  #{$className}::-webkit-scrollbar
+    width: $width
+  #{$className}::-webkit-scrollbar-track
+    background: $dark
+  #{$className}::-webkit-scrollbar-thumb
+    background: $bgThumb
+    border-radius: 6px
 body
   background: #1e1e1e url("../img/line-bg.svg") no-repeat center / cover
 .btn
