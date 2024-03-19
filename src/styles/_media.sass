@@ -1,11 +1,15 @@
 @media (min-width: 1200px) and (max-width: 1399px)
   .sidebar-profile
     width: 250px
+  .messages-info__last
+    max-width: 55rem
 @media (min-width: 992px) and (max-width: 1199px)
   .sidebar
     width: 250px
     &-profile
       width: 220px
+  .messages-info__last
+    max-width: 45rem
 @media (min-width: 768px) and (max-width: 991px)
   html
     font-size: 9px
@@ -54,6 +58,14 @@
       color: $primary
       &:last-child
         margin-right: 0
+  .messages
+    &__item
+      width: 85%
+    &-part
+      width: 15%
+    &-info
+      &__last
+        max-width: 30rem
 @media (max-width: 767px)
   html
     font-size: 8px
@@ -124,3 +136,11 @@
           transform: translateY(0) scaleY(1)
           border-bottom-right-radius: 12px
           border-bottom-left-radius: 12px
+  .messages
+    &__item
+      width: 80%
+    &-part
+      width: 20%
+    &-info
+      &__last
+        max-width: 20rem

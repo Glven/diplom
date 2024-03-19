@@ -4,13 +4,13 @@ import {ARTICLE_PAGE} from "../utils/routes/path";
 
 const Post = (props) => {
     return (
-        <div className="post">
+        <div className="post" key={props.key} id={props.id}>
             <div className="author">
                 <div className="author__photo">
                     <img src={props.ava} alt=""/>
                 </div>
                 <div className="author-info">
-                    <h3 className="author-info__name">{props.name}</h3>
+                    <h3 className="author-info__name">{props.family} {props.name}</h3>
                     <span className="author-info__time">{props.date}</span>
                 </div>
             </div>
