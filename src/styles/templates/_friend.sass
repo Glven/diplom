@@ -1,0 +1,44 @@
+.friend
+  padding: 2rem
+  background: $dark
+  display: flex
+  align-items: center
+  background: $dark
+  &__photo
+    display: flex
+    align-items: center
+    justify-content: center
+    width: 10rem
+    height: 10rem
+    border-radius: 50%
+    overflow: hidden
+    margin-right: 10px
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex: 1 auto
+  &__name
+    color: $light
+    align-items: center
+    font-size: 16px
+    font-family: 'Montserrat', sans-serif
+    font-weight: 500
+    line-height: 14*1.5px
+    letter-spacing: 1px
+  &__icons
+    display: none
+  &__buttons
+    display: flex
+    flex-direction: column
+  &__btn
+    text-align: center
+    padding: 5px !important
+    width: 13rem
+    margin-bottom: 1rem
+    &:last-child
+      margin-bottom: 0

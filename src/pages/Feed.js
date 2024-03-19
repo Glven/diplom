@@ -7,8 +7,8 @@ import Sidebar from "../components/Sidebar";
 
 const Feed = () => {
     return (
-        <div className="row justify-content-center">
-            <div className="col-3">
+        <div className="row justify-content-center justify-content-lg-start">
+            <div className="col-12 col-lg-3">
                 <Sidebar/>
             </div>
             <div className="col-12 col-md-9 col-lg-8">

@@ -5,6 +5,7 @@ import POST1 from "../img/post.jpg";
 import POST2 from "../img/post-2.jpg";
 import CategorySidebar from "../components/CategorySidebar";
 import Navigation from "../components/Navigation";
+import Search from "../components/Search";
 
 const categories = ['Категория 1', 'Категория 2', 'Категория 3', 'Категория 4', 'Категория 5', 'Категория 6', ];
 
@@ -14,11 +15,7 @@ const ArticlePage = () => {
         <section className="articles">
             <div className="row">
                 <form className="col-12 col-md-8 col-lg-9">
-                    <div className="articles-search">
-                        <input id="article-search" type="text" placeholder="Найти" className="articles-search__input" onChange={clearShow}/>
-                        <button type="submit" className="articles-search__btn"><i className="fa fa-search" aria-hidden="true"></i></button>
-                        <span className="articles-search__clear" onClick={clearInput}><i className="fa fa-times" aria-hidden="true"></i></span>
-                    </div>
+                    <Search searchId="article-search"/>
                 </form>
             </div>
             <div className="row">
@@ -41,20 +38,5 @@ const ArticlePage = () => {
     );
 };
 
-const clearShow = () => {
-    const searchInput = document.getElementById('article-search');
-    const clearBtn = document.querySelector('.articles-search__clear');
-    if(searchInput.value!==""){
-        clearBtn.classList.add('articles-search__clear--active');
-    }
-    else{
-        clearBtn.classList.remove('articles-search__clear--active');
-    }
-}
-const clearInput = () => {
-    const searchInput = document.getElementById('article-search');
-    const clearBtn = document.querySelector('.articles-search__clear');
-    searchInput.value = "";
-    clearBtn.classList.remove('articles-search__clear--active');
-}
+
 export default ArticlePage;
