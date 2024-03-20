@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {FRIEND_PAGE} from "../utils/routes/path";
+import {FRIEND_PAGE} from "../../utils/routes/path";
 
 const Dialog = (props) => {
     return (

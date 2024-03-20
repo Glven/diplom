@@ -1,11 +1,8 @@
 import React from 'react';
-import Post from "../components/Post";
-import ava from "../img/ava.jpg";
-import POST1 from "../img/post.jpg";
-import POST2 from "../img/post-2.jpg";
-import CategorySidebar from "../components/CategorySidebar";
-import Navigation from "../components/Navigation";
-import Search from "../components/Search";
+import Post from "../components/ArticleComponents/Post";
+import CategorySidebar from "../components/NavigationComponents/CategorySidebar";
+import Navigation from "../components/NavigationComponents/Navigation";
+import Search from "../components/NavigationComponents/Search";
 
 const ArticlePage = (props) => {
     return (

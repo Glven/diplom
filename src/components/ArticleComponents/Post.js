@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {ARTICLE_PAGE} from "../utils/routes/path";
+import {ARTICLE_PAGE} from "../../utils/routes/path";
 
 const Post = (props) => {
     return (

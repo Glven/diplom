@@ -1,9 +1,10 @@
 import React from 'react';
+import Sidebar from "../components/NavigationComponents/Sidebar";
 
 const MainPage = () => {
     return (
-        <div>
-            
+        <div className="row">
+            <Sidebar/>
         </div>
     );
 };

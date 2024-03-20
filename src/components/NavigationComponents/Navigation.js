@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {FEED_PAGE, FRIEND_PAGE, MESSAGE_PAGE, PROFILE_PAGE} from "../utils/routes/path";
+import {FEED_PAGE, FRIEND_PAGE, MESSAGE_PAGE, PROFILE_PAGE} from "../../utils/routes/path";
 
 const Navigation = () => {
     return (

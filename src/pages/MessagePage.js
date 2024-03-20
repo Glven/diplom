@@ -1,7 +1,7 @@
 import React from 'react';
-import TemplateWithSidebar from "../components/TemplateWithSidebar";
 import ava from "../img/ava.jpg";
-import Message from "../components/Message";
+import Message from "../components/MessageComponents/Message";
+import Sidebar from "../components/NavigationComponents/Sidebar";
 
 const messages = [
     {
@@ -25,7 +25,10 @@ const messages = [
 
 const MessagePage = () => {
     return (
-        <TemplateWithSidebar content={<Message messages={messages}/>}/>
+        <div className="row justify-content-center justify-content-lg-start">
+            <Sidebar/>
+            <Message messages={messages}/>
+        </div>
     );
 };
 
