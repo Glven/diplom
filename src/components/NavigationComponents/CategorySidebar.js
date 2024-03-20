@@ -3,9 +3,8 @@ const showAndHide = () => document.querySelector('.sidebar').classList.toggle('s
 const CategorySidebar = (props) => {
     return (
         <div className="sidebar" onClick={showAndHide}>
-            <h2 className="sidebar__title"><i className={`fa fa-`+props.icon} aria-hidden="true"></i>{props.title}
-                <div className="sidebar__down"><i
-                    className="fa fa-caret-down" aria-hidden="true"></i></div>
+            <h2 className="sidebar__title"><i className="fa fa-tag" aria-hidden="true"></i>Категории
+                <div className="sidebar__down"><i className="fa fa-caret-down" aria-hidden="true"></i></div>
             </h2>
             <div className="sidebar__wrapper">
                 {props.categories.map((category)=>

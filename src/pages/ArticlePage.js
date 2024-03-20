@@ -1,36 +1,25 @@
 import React from 'react';
-import Post from "../components/ArticleComponents/Post";
-import CategorySidebar from "../components/NavigationComponents/CategorySidebar";
 import Navigation from "../components/NavigationComponents/Navigation";
-import Search from "../components/NavigationComponents/Search";
+import CategorySidebar from "../components/NavigationComponents/CategorySidebar";
+import {useParams} from "react-router-dom";
+import Post from "../components/ArticleComponents/Post";
 
 const ArticlePage = (props) => {
+    const {id} = useParams();
+    const post = props.posts.find(p=>p.id===parseInt(id));
     return (
-        <section className="articles">
+        <div className="article">
             <div className="row">
-                <form className="col-12 col-md-8 col-lg-9">
-                    <Search searchId="article-search"/>
-                </form>
-            </div>
-            <div className="row">
-                <div className="col-12 col-md-8 col-lg-9 col-lg-8 order-1 order-md-0">
-                    {props.posts.map((p)=>
-                        <Post key={p.key} id={p.id} ava={p.ava} family={p.family} name={p.name} date={p.date} title={p.title} photo={p.photo} category={p.category} text={p.text} likes={p.likes} dislikes={p.dislikes} comments={p.comments} views={p.views} />
-                    )}
+                <div className="col-12 col-md-9">
+                    <Post id={post.id} date={post.date} ava={post.ava} family={post.family} name={post.name} photo={post.photo} category={post.category} title={post.title} text={post.text} likes={post.likes} dislikes={post.dislikes} comments={post.comments} views={post.views} format="full" />
                 </div>
-                <div className="col-12 col-md-4 col-lg-3 order-0 order-md-1">
-                    <CategorySidebar icon="tag" title="Категории" categories={props.categories}/>
-                </div>
-                <div className="pagination order-2">
-                    <span className="pagination__item">1</span><span className="pagination__item">2</span><span
-                    className="pagination__item">3</span><span className="pagination__item">4</span><span
-                    className="pagination__item">5</span>
+                <div className="col-12 col-md-3">
+                    <CategorySidebar categories={props.categories}/>
                 </div>
             </div>
             <Navigation/>
-        </section>
+        </div>
     );
 };
-
 
 export default ArticlePage;

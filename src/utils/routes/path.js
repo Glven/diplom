@@ -7,3 +7,4 @@ export const FRIEND_PAGE = '/friends';
 export const MESSAGE_PAGE = '/messages';
 export const FEED_PAGE = '/feeds';
 export const DIALOG_PAGE = '/dialog';
+export const POST_PAGE = '/article';

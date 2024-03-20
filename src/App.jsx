@@ -5,17 +5,18 @@ import {
     FEED_PAGE,
     FRIEND_PAGE,
     MAIN_PAGE,
-    MESSAGE_PAGE, PROFILE_PAGE,
+    MESSAGE_PAGE, POST_PAGE, PROFILE_PAGE,
 } from "./utils/routes/path";
 import React, {useState} from "react";
 import Header from "./components/NavigationComponents/Header";
 import MainPage from "./pages/MainPage";
 import FeedPage from "./pages/FeedPage";
-import ArticlePage from "./pages/ArticlePage";
+import ArticlesPage from "./pages/ArticlesPage";
 import FriendPage from "./pages/FriendPage";
 import MessagePage from "./pages/MessagePage";
 import DialogPage from "./pages/DialogPage";
 import ProfilePage from "./pages/ProfilePage";
+import ArticlePage from "./pages/ArticlePage";
 const App = (props) => {
     return (
         <>
@@ -25,12 +26,13 @@ const App = (props) => {
                     <div className="container">
                         <Routes>
                             <Route path={MAIN_PAGE} element={<MainPage/>} exact/>
-                            <Route path={ARTICLE_PAGE} element={<ArticlePage posts={props.posts} categories={props.categories} />} exact />
+                            <Route path={ARTICLE_PAGE} element={<ArticlesPage posts={props.posts} categories={props.categories} />} exact />
                             <Route path={FEED_PAGE} element={<FeedPage posts={props.posts}/>} exact />
                             <Route path={FRIEND_PAGE} element={<FriendPage/>} exact />
                             <Route path={MESSAGE_PAGE} element={<MessagePage/>} exact />
                             <Route path={DIALOG_PAGE} element={<DialogPage/>} exact/>
                             <Route path={PROFILE_PAGE} element={<ProfilePage/>} exact />
+                            <Route path={`${POST_PAGE}/:id`} element={<ArticlePage posts={props.posts} categories={props.categories} />} exact />
                         </Routes>
                     </div>
                 </section>

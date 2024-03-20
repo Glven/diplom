@@ -1,17 +1,17 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
-import {ARTICLE_PAGE} from "../../utils/routes/path";
+import {FRIEND_PAGE, POST_PAGE} from "../../utils/routes/path";
 
 const Post = (props) => {
     return (
-        <div className="post" key={props.key} id={props.id}>
+        <div className={`post post--${props.format}`} key={props.id}>
             <div className="author">
                 <div className="author__photo">
                     <img src={props.ava} alt=""/>
                 </div>
                 <div className="author-info">
-                    <h3 className="author-info__name">{props.family} {props.name}</h3>
-                    <span className="author-info__time">{props.date}</span>
+                    <NavLink to={FRIEND_PAGE} className="author-info__name">{props.family} {props.name}</NavLink>
+                    <p className="author-info__time">{props.date}</p>
                 </div>
             </div>
             <div className="post__photo">
@@ -21,11 +21,11 @@ const Post = (props) => {
                 <i className="fa fa-tag" aria-hidden="true"></i>
                 <span>{props.category}</span>
             </div>
-            <NavLink to={ARTICLE_PAGE} className="post__title">{props.title}</NavLink>
+            <NavLink to={`${POST_PAGE}/${props.id}`} className="post__title">{props.title}</NavLink>
             <p className="post__text">
                 {props.text}
             </p>
-            <NavLink to={ARTICLE_PAGE} className="btn btn--primary post__link">Читать далее</NavLink>
+            <NavLink to={POST_PAGE} className="btn btn--primary post__link">Читать далее</NavLink>
             <div className="post__info">
                 <div className="rating">
                     <span className="rating__count rating__l">{props.likes}</span>
